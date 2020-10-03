@@ -1,0 +1,257 @@
+/*CSS*/
+
+.burguermenu {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 20px;
+    opacity: 0;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: -55px;
+    /*padding: 7px;*/
+    cursor: pointer;
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.bar1, .bar2, .bar3 {
+    /*align-self: flex-start;*/
+    margin: 6px;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    border: slategrey solid 1px;
+    opacity: 0.9;
+    cursor: pointer;
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.burguermenu div:nth-child(1) {
+    top: 0px;
+  }
+  
+  .burguermenu div:nth-child(2) {
+    top: 18px;
+  }
+  
+  .burguermenu div:nth-child(3) {
+    top: 36px;
+  }
+
+  .burguermenu.open div:nth-child(1) {
+    top: 0px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  .burguermenu.open div:nth-child(2) {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  
+  .burguermenu.open div:nth-child(3) {
+    top: 0px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+
+  /*Estilo del menú Overlay*/
+
+  /* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 0;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+
+  /* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    font-family: 'Quicksand', sans-serif;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+  }
+
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 80px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+#panoramica {
+    position: relative;
+    text-align: left;
+    z-index: -1;
+}
+
+
+#panoramica img{ 
+    position: relative;
+    opacity: 0;
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    overflow: auto;
+    position: center;
+    right: 0;
+    top: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+    z-index: -1;
+}
+
+#bienvenido{
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    top: 250px;
+    left: 20px;
+    opacity: 0;
+}
+
+#bienvenido h1{
+    font-size: 100px;
+    margin-left: -4;
+    margin-bottom: 0;
+}
+
+#panoramica p{
+  font-size: 25px;
+}
+
+#piedepagina{
+   /* border: green 3px solid;*/
+    width: 100%;
+    overflow: auto;
+    background-color: black;
+    font-family: 'Quicksand', sans-serif; 
+    color: white;
+    margin-bottom: auto;
+}
+
+#contactopie {
+    /*border: orchid 3px solid;*/
+     opacity: 85%;
+     margin-right: 4px;
+     text-align: right;
+     float: right;
+     width: 33%;
+ }
+
+#direccion {
+   /*border: orchid 3px solid;*/
+    opacity: 85%;
+    float: left;
+    width: 33%;
+}
+
+#direccion p{
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+#redessociales {
+    margin: 5px 0px 0px 0px;
+    padding: 15px 0px 0px 0px;
+    float: left;
+}
+
+.fa{
+  padding: 8px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 200%;
+  opacity: 0.9;
+}
+
+.fa:hover {
+    opacity: 0.5;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  #botonfacebook {
+      padding: 0px 4px 0px 138px;
+      float: left;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  #botontwitter {
+    padding: 0px 10px 0px 4px;
+    
+      float: left;
+  }
+
+  #botoninstagram{
+        padding: 0px 4px 0px 4px;
+      float: left;
+  }
+
+  .fa-instagram {
+      background: rgb(226, 99, 243);
+      color: black;
+  }
